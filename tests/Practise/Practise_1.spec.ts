@@ -15,7 +15,7 @@ test.skip('Basic Navigation', async({page}) => {
     await page.getByTestId('new-user-username-field').fill('Johnny');
 })
 
-test.only('Using various Locator Methods', async ({page}) => {
+test.skip('Using various Locator Methods', async ({page}) => {
     await page.goto('https://gitlab.com/');
     await page.click('#onetrust-accept-btn-handler');
     //await page.getByRole('link', {name: 'Sign in'}).click();
