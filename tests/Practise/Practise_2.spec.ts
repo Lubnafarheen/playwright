@@ -19,7 +19,7 @@ test.skip('Automation Form Submission', async ({page}) => {
    await expect(firstTodo).not.toHaveClass('completed');
 })
 
-test.only('Handling Forms', async ({page}) => {
+test('Handling Forms', async ({page}) => {
     await page.goto('https://demo.playwright.dev/todomvc/#/');
     const placeholder = '[placeholder="What needs to be done?"]';
     await page.fill(placeholder, 'Lubna' );
