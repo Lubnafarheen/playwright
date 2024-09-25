@@ -35,7 +35,7 @@ test.skip('Accept confirm alert', async ({page}) => {
     expect(alertMessage).toBe('You clicked OK.');
 })
 
-test.only('handling pop-ups', async ({page}) => {
+test.skip('handling pop-ups', async ({page}) => {
     await page.goto('file:///C:/Users/tanze/OneDrive/Desktop/playwright/tests/Practise/practise_4/index.html');
     const [popup] = await Promise.all([
         page.waitForEvent('popup'),
