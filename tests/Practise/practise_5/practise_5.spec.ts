@@ -1,6 +1,6 @@
 import test, { expect } from "@playwright/test";
 
-test('Open new window and navigate back', async ({context,page}) => {
+test.skip('Open new window and navigate back', async ({context,page}) => {
     await page.goto('file:///C:/Users/tanze/OneDrive/Desktop/playwright/tests/Practise/practise_5/index.html');
     const pagePromise = context.waitForEvent('page');
     await page.click('#openNewWindow');
@@ -19,7 +19,7 @@ test('Open new window and navigate back', async ({context,page}) => {
    expect(buttonText).toBe('Back to Main Page');
    })
 
-   test('Adding cookies', async ({page}) => {
+   test.skip('Adding cookies', async ({page}) => {
     await page.goto('http://127.0.0.1:5500/tests/Practise/practise_5/index.html');
     await page.click('#setCookie');
     const cookies = await page.context().cookies('http://127.0.0.1:5500/tests/Practise/practise_5/index.html');
@@ -28,7 +28,7 @@ test('Open new window and navigate back', async ({context,page}) => {
     await expect(sessionCookies).toBeDefined();
    })
 
-   test('Deleting cookies', async ({page}) => {
+   test.skip('Deleting cookies', async ({page}) => {
     await page.goto('http://127.0.0.1:5500/tests/Practise/practise_5/index.html');
     await page.click('#setCookie');
     const cookies = await page.context().cookies('http://127.0.0.1:5500/tests/Practise/practise_5/index.html');

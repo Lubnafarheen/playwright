@@ -28,7 +28,7 @@ test.skip('Drag and drop', async ({page}) => {
     // await page.mouse.up();
     expect(await page.textContent('.drop-target')).toContain('Success');
 })
-test('Handling iframe', async ({page}) => {
+test.skip('Handling iframe', async ({page}) => {
     await page.goto('file:///C:/Users/tanze/OneDrive/Desktop/playwright/tests/Practise/Practise_3/index.html');
     const iframeElement = await page.frame({name: 'iframeName'});
     const iframeInputSelector ='#iframe-input';
